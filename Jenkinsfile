@@ -16,17 +16,10 @@ pipeline
         {
             steps 
             {
-                echo 'Test App'
+                bat 'mvn test'
             }
         }
 
-        stage('Deploy') 
-        {
-            steps 
-            {
-                echo 'Deploy App'
-            }
-        }
     }
 
     post
