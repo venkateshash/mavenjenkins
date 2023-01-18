@@ -35,7 +35,7 @@ pipeline
     	always
     	{
     		
-    		emailext body: 'Summary', subject: 'Pipeline Status', to: 'selenium3bymukesh@gmail.com'
+    		 archiveArtifacts artifacts:'**/*.jsp,**/*.war,**/*.xml',followSymlinks:false
     	
     	} 
 
