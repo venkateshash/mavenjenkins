@@ -32,10 +32,11 @@ pipeline
     post
     {
 
-    	always
+    	success
     	{
-    		emailext body: 'Summary', subject: 'Pipeline Status', to: 'selenium3bymukesh@gmail.com'
-    	}
+    		junit '**/target/surefire-reports/TEST-*.xml'
+            archiveArtifacts 'target/*.jar'
+    	} 
 
     }
 }
