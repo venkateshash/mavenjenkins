@@ -16,10 +16,11 @@ pipeline
         {
             steps 
             {
-                bat 'mvn test'
+                bat 'mvm test'
             }
         }
 
+      
     }
 
     post
@@ -27,10 +28,8 @@ pipeline
 
     	always
     	{
-    		
     		 archiveArtifacts artifacts:'**/*.jsp,**/*.war,**/*.xml',followSymlinks:false
-    	
-    	} 
+    	}
 
     }
 }
